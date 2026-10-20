@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f4ee">
+  <meta name="description" content="곤트란 쉐리에 단체주문 안내. 베이커리 셀렉션, 다과 세트, 샌드위치 셀렉션. 기업 행사, 단체 간식, 답례품은 전화로 상담하세요.">
+  <meta property="og:title" content="GONTRAN CHERRIER | 단체주문">
+  <meta property="og:description" content="특별한 자리에 어울리는 프렌치 베이커리. 구성과 수량을 전화로 상담해 보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/bakery-selection.webp">
+  <title>곤트란 쉐리에 | 단체주문 · GROUP ORDER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f7f4ee;--canvas:#fffdf9;--cream:#f0e9dd;--ink:#30271f;--brown:#514032;--tan:#a48060;--sand:#d6c0a8;--line:#e4dbcf;--muted:#766b60;--forest:#3d4c3e;--dark:#2a271f;--serif:'Cormorant Garamond',Georgia,serif;--kserif:'Noto Serif KR','Batang',serif;--sans:'Noto Sans KR','Malgun Gothic',sans-serif;--shadow:0 18px 60px rgba(36,29,20,.11)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:100px} body{margin:0;background:var(--paper);font-family:var(--sans);color:var(--ink);font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased} a{color:inherit;text-decoration:none} button{font:inherit} button,a{-webkit-tap-highlight-color:transparent} img{max-width:100%;display:block} ::selection{background:#d8b99a;color:#2e241f}
+    .skip{position:absolute;z-index:999;left:12px;top:-60px;background:#fff;color:#222;padding:12px 20px} .skip:focus{top:12px}
+    .announcement{height:34px;background:var(--dark);color:#e9e0d4;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.12em;font-weight:400;text-align:center;padding:0 10px}
+    .site-header{position:sticky;top:0;z-index:80;height:83px;background:rgba(247,244,238,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(76,58,43,.11)}
+    .header-inner{max-width:1440px;padding:0 48px;margin:auto;height:100%;display:flex;align-items:center;justify-content:space-between;gap:36px}
+    .wordmark{width:242px;line-height:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0}
+    .wordmark__name{font-family:var(--serif);font-size:24px;white-space:nowrap;letter-spacing:.034em;font-weight:600}.wordmark__tag{font-family:var(--serif);font-size:10px;letter-spacing:.31em;font-weight:600}
+    .nav{display:flex;align-items:center;gap:32px;margin-left:auto}.nav>a{font-size:12px;font-weight:500;letter-spacing:-.015em;color:#54483e;position:relative;padding:6px 0}.nav>a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--tan);transition:width .25s}.nav>a:hover::after{width:100%}
+    .header-call{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;border:1px solid var(--ink);padding:11px 18px;font-size:11px;font-weight:600;letter-spacing:.02em;transition:background .2s,color .2s}.header-call:hover{color:#fff;background:var(--ink)} .icon{width:16px;height:16px;display:inline-block;flex-shrink:0}
+    .mobile-menu-toggle{display:none;background:none;border:0;padding:12px;cursor:pointer;color:var(--ink)}.mobile-menu-toggle .bars{width:23px;display:block;height:2px;background:currentColor;position:relative}.mobile-menu-toggle .bars:before,.mobile-menu-toggle .bars:after{content:'';width:23px;height:2px;background:currentColor;position:absolute;left:0}.mobile-menu-toggle .bars:before{top:-7px}.mobile-menu-toggle .bars:after{top:7px}
+    .wrap{max-width:1300px;margin:0 auto;padding-left:40px;padding-right:40px}.eyebrow{display:flex;align-items:center;gap:14px;color:#92755d;font-family:var(--serif);font-weight:700;letter-spacing:.18em;font-size:14px;text-transform:uppercase}.eyebrow:before{content:'';width:27px;height:1px;background:currentColor;opacity:.65}.eyebrow--light{color:#d6b99a}
+    .display{font-family:var(--kserif);font-weight:500;line-height:1.48;letter-spacing:-.056em;word-break:keep-all}.subtext{color:var(--muted);font-size:15px;line-height:2.05;word-break:keep-all}
+    .btn-primary,.btn-outline,.btn-light{display:inline-flex;align-items:center;gap:32px;justify-content:space-between;min-width:208px;padding:17px 22px;font-size:12px;font-weight:600;letter-spacing:.02em;transition:transform .2s,background .2s,color .2s,border .2s;cursor:pointer}
+    .btn-primary{background:var(--brown);color:white;border:1px solid var(--brown)}.btn-primary:hover{transform:translateY(-3px);background:#291d16}.btn-outline{background:transparent;border:1px solid #c6b8a8;color:var(--ink)}.btn-outline:hover{transform:translateY(-3px);border-color:var(--brown)}.btn-light{background:#e8d6c1;border:1px solid #e8d6c1;color:#281e18}.btn-light:hover{background:#fff;transform:translateY(-3px)}.arrow{font-size:19px;line-height:1;font-family:Georgia,serif}
+    .hero{position:relative;min-height:680px;overflow:hidden;background:linear-gradient(105deg,#f6f1e9 0%,#f7f3ec 47%,#efe4d5 100%)}
+    .hero__inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:49% 51%;min-height:680px}
+    .hero__copy{position:relative;z-index:2;padding:114px 20px 108px clamp(48px,7vw,125px);align-self:center}.hero__label{font-family:var(--serif);font-size:18px;font-weight:600;color:#947860;letter-spacing:.17em;text-transform:uppercase}
+    .hero__heading{font-family:var(--kserif);font-weight:500;letter-spacing:-.064em;font-size:clamp(37px,3.8vw,57px);line-height:1.47;margin:25px 0 24px;word-break:keep-all}.hero__heading em{font-style:normal;color:#98775d}.hero__desc{font-size:15px;color:#736557;line-height:2.25;word-break:keep-all;margin:0 0 32px}.hero__buttons{display:flex;flex-wrap:wrap;gap:11px}
+    .hero__image-area{position:relative;min-height:680px;overflow:hidden}.hero__image{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:48% 50%;filter:saturate(.94)}.hero__image-area::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(245,241,232,.12) 0%,transparent 35%)}
+    .hero__float{position:absolute;right:10%;bottom:9%;z-index:2;background:rgba(255,252,247,.95);padding:20px 28px;text-align:center;min-width:210px;box-shadow:0 8px 30px rgba(0,0,0,.12)}.hero__float .en{font:600 27px/1 var(--serif);letter-spacing:.025em}.hero__float .fine{font:600 9px/1.6 var(--serif);letter-spacing:.25em;margin-top:10px;color:#806b59}
+    .hero__vertical{position:absolute;z-index:2;top:36px;right:30px;writing-mode:vertical-rl;color:white;font:600 13px var(--serif);letter-spacing:.28em;text-shadow:0 2px 15px #46342d}
+    .hero__index{position:absolute;z-index:2;bottom:27px;left:34px;color:white;font:600 14px var(--serif);letter-spacing:.14em;text-shadow:0 2px 10px #312417}
+    .trust-strip{background:#efeadf;border-bottom:1px solid #e3d8c8}.trust-strip__inner{max-width:1140px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);padding:24px 20px}.trust-strip__item{text-align:center;font-size:13px;letter-spacing:-.02em;color:#655648;border-right:1px solid #cfc2b1}.trust-strip__item:last-child{border-right:0}.trust-strip__item span{font-family:var(--serif);font-size:21px;margin-right:12px;color:#9c8169}
+    .intro{padding:126px 0 123px}.intro__grid{display:grid;grid-template-columns:1fr 1fr;gap:95px;align-items:center}.intro__heading{font-size:clamp(29px,3.1vw,44px);margin:27px 0 20px}.intro__text{margin:0}.intro__line{display:block;width:42px;height:1px;background:#9f826a;margin:32px 0}.intro__english{font:italic 27px/1.3 var(--serif);color:#a58a71}.intro__stamp{justify-self:center;border:1px solid #c5b39e;border-radius:50%;width:220px;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:#67513d;transform:rotate(-6deg)}.intro__stamp::before{content:'';inset:9px;position:absolute;border:1px solid #d9ccbc;border-radius:50%}.intro__stamp strong{font:500 38px/1 var(--serif)}.intro__stamp span{font:600 10px/1.5 var(--serif);letter-spacing:.24em;margin-top:16px;text-align:center}
+    .selection{background:var(--canvas);padding:115px 0 134px;position:relative}.selection__header{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:44px}.section-title{font-size:clamp(29px,3vw,43px);margin:20px 0 0}.selection__intro{max-width:355px;text-align:right;color:#897a6b;line-height:1.9;font-size:13px;margin:0}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}.menu-card{display:flex;flex-direction:column;background:#f9f6f0;border:1px solid #eee7dc;transition:box-shadow .25s,transform .25s;min-width:0}.menu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .menu-card__visual{position:relative;overflow:hidden;aspect-ratio:1/1.13;background:#e6ddce}.menu-card__visual img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}.menu-card:hover .menu-card__visual img{transform:scale(1.04)}.menu-card--bakery .menu-card__visual img{object-position:50% 49%}.menu-card--tea .menu-card__visual img{object-position:50% 47%}.menu-card--sandwich .menu-card__visual img{object-position:50% 45%}
+    .menu-card__number{position:absolute;left:20px;top:19px;width:42px;height:42px;background:rgba(255,252,247,.94);display:grid;place-items:center;font:600 17px var(--serif);letter-spacing:.03em;z-index:2}.menu-card__content{padding:24px 26px 32px;display:flex;flex:1;flex-direction:column}.menu-card__en{font:600 13px/1.5 var(--serif);letter-spacing:.14em;color:#a18366;text-transform:uppercase}.menu-card__title{font:500 25px/1.4 var(--kserif);letter-spacing:-.05em;margin:10px 0 14px}.menu-card__desc{font-size:13px;color:#817366;line-height:1.9;margin:0 0 25px;min-height:52px;word-break:keep-all}.menu-card__link{margin-top:auto;font-size:12px;font-weight:700;border-top:1px solid #e0d6ca;padding-top:14px;display:flex;align-items:center;justify-content:space-between}.menu-card__link span:last-child{font-size:18px;line-height:1;color:#9f7c62}
+    .selection__note{font-size:12px;color:#978779;text-align:right;margin:19px 2px 0}
+    .occasion{padding:124px 0 136px;background:#efe8dd}.occasion__header{text-align:center;margin-bottom:44px}.occasion__header .eyebrow{justify-content:center}.occasion__header .section-title{margin-bottom:14px}.occasion__header .subtext{margin:0;font-size:14px}.occasion__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.occasion__item{background:#faf7f1;min-height:220px;padding:29px 24px 30px;display:flex;flex-direction:column;align-items:flex-start;border-top:2px solid #b99a79;transition:transform .2s}.occasion__item:hover{transform:translateY(-4px)}.occasion__n{font:600 18px var(--serif);color:#ad8d6b}.occasion__name{font:500 21px var(--kserif);letter-spacing:-.05em;margin-top:22px}.occasion__desc{color:#857769;font-size:12px;line-height:1.8;margin:11px 0 0;word-break:keep-all}
+    .interlude{height:430px;position:relative;overflow:hidden;background:#e2c7ad}.interlude img{width:100%;height:100%;object-fit:cover;object-position:center 50%}.interlude::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(38,29,24,.63) 0%,rgba(38,29,24,.14) 75%)}.interlude__copy{position:absolute;z-index:2;left:max(8%,calc((100vw - 1140px)/2));top:50%;transform:translateY(-50%);color:#fff}.interlude__copy small{font:600 14px var(--serif);letter-spacing:.2em}.interlude__copy h2{font:500 clamp(28px,3.3vw,46px)/1.5 var(--kserif);margin:15px 0 0;letter-spacing:-.06em;word-break:keep-all}
+    .process{background:var(--canvas);padding:126px 0 134px}.process__heading{margin-bottom:50px}.process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.step{padding:14px 22px 15px 0;margin-right:25px;border-top:1px solid #a99179;position:relative}.step:not(:last-child)::after{content:'↗';position:absolute;top:6px;right:3px;color:#b4a18d;font-family:Georgia;font-size:20px}.step__num{font:600 34px/1 var(--serif);color:#af9579}.step__title{font:500 21px var(--kserif);letter-spacing:-.05em;margin:27px 0 10px}.step__text{font-size:13px;line-height:2;color:#8a7d70;margin:0;word-break:keep-all}.process__foot{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:46px;margin-top:42px;border-top:1px solid #e5dbcf}.process__foot p{color:#806f60;margin:0;font-size:13px}
+    .contact{background:#302820;color:#fff;position:relative;overflow:hidden}.contact::before{content:'';position:absolute;right:-15%;top:-100%;height:900px;width:900px;border:1px solid rgba(241,218,188,.13);border-radius:50%;box-shadow:0 0 0 130px rgba(241,218,188,.025),0 0 0 260px rgba(241,218,188,.017)}.contact__inner{padding-top:118px;padding-bottom:117px;position:relative;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:45px}.contact__title{font-size:clamp(31px,3.4vw,48px);margin:22px 0 18px;line-height:1.55}.contact__desc{color:#cbbcae;font-size:14px;line-height:2.05;margin:0}.contact__actions{display:flex;flex-direction:column;gap:20px;align-items:flex-start}.contact__num{font:600 clamp(29px,3vw,41px) var(--serif);letter-spacing:.07em;color:#ecd7bd;white-space:nowrap}.contact__hint{font-size:11px;color:#ab9987;letter-spacing:.01em}
+    .faq{padding:110px 0 132px;background:#f7f4ee}.faq__inner{display:grid;grid-template-columns:37% 63%;gap:55px}.faq__header h2{margin-top:20px}.faq__caption{font-size:14px;color:#857768;line-height:2}.faq__items{padding-right:55px}.faq details{border-bottom:1px solid #ded3c6}.faq details:first-child{border-top:1px solid #ded3c6}.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:21px 0;font-size:14px;font-weight:500}.faq summary::-webkit-details-marker{display:none}.faq summary .plus{font:300 26px var(--serif);transition:transform .2s;color:#a18566}.faq details[open] summary .plus{transform:rotate(45deg)}.faq details p{font-size:13px;color:#807367;line-height:2.1;margin:0;padding:0 35px 24px 0;word-break:keep-all}
+    .footer{background:#241e19;color:#ded2c4;padding:66px 0 28px}.footer__main{display:flex;gap:40px;justify-content:space-between;align-items:flex-start;padding-bottom:55px}.footer__brand{font:600 33px/1 var(--serif);letter-spacing:.01em}.footer__tag{font:600 10px/1.8 var(--serif);letter-spacing:.28em;margin-top:14px;color:#baaa97}.footer__info{text-align:right;font-size:13px;color:#bdab99;line-height:2}.footer__info strong{color:#eee2d5;font-weight:500}.footer__bottom{border-top:1px solid #483b30;padding-top:20px;display:flex;align-items:center;justify-content:space-between;color:#9a8876;font-size:11px;gap:20px}.footer__bottom a{font-family:var(--serif);font-size:14px;color:#ddd0c1}.mobile-call{display:none}
+    :focus-visible{outline:2px solid #9b724e;outline-offset:4px}
+    @media (max-width:1170px){.header-inner{padding:0 27px;gap:18px}.nav{gap:18px}.wordmark{width:218px}.wordmark__name{font-size:23px}.hero__copy{padding-left:60px}.hero__heading{font-size:45px}.intro__grid{gap:60px}}
+    @media (max-width:900px){.site-header{height:70px}.header-inner{padding:0 20px}.wordmark{width:212px}.wordmark__name{font-size:23px}.header-call{margin-left:auto}.mobile-menu-toggle{display:block}.nav{display:none;position:absolute;top:70px;left:0;right:0;align-items:stretch;gap:0;background:var(--paper);padding:15px 26px 24px;border-bottom:1px solid var(--line);box-shadow:0 15px 20px rgba(40,30,20,.07);flex-direction:column}.nav.is-open{display:flex}.nav>a{padding:13px 0;border-bottom:1px solid #e8dfd3;font-size:14px}.nav>a::after{display:none}.hero__inner{min-height:620px}.hero{min-height:620px}.hero__copy{padding:65px 26px 65px 35px}.hero__heading{font-size:37px}.hero__desc{font-size:13px}.hero__image-area{min-height:620px}.wrap{padding-left:30px;padding-right:30px}.menu-grid{gap:14px}.menu-card__content{padding:22px 18px 26px}.menu-card__title{font-size:20px}.menu-card__desc{font-size:12px}.occasion__grid{grid-template-columns:repeat(2,1fr)}.faq__inner{grid-template-columns:1fr;gap:28px}.faq__items{padding-right:0}}
+    @media (max-width:700px){html{scroll-padding-top:78px}.announcement{height:29px;font-size:9px;letter-spacing:.05em}.site-header{height:65px}.header-inner{padding:0 17px}.wordmark{width:auto}.wordmark__name{font-size:21px}.wordmark__tag{font-size:8px;letter-spacing:.2em}.header-call{display:none}.nav{top:65px}.hero{min-height:unset}.hero__inner{min-height:unset;grid-template-columns:1fr}.hero__copy{padding:60px 25px 57px}.hero__label{font-size:15px}.hero__heading{font-size:clamp(33px,8.5vw,46px);margin:17px 0 17px;line-height:1.45}.hero__desc{font-size:13px;line-height:2.05;margin-bottom:24px}.hero__buttons{gap:9px}.btn-primary,.btn-outline,.btn-light{min-width:0;padding:14px 18px;font-size:12px;gap:28px}.hero__image-area{min-height:360px;height:62vw;max-height:530px}.hero__float{right:18px;bottom:18px;padding:12px 18px;min-width:160px}.hero__float .en{font-size:22px}.hero__float .fine{font-size:8px;margin-top:6px}.hero__vertical{top:18px;right:12px;font-size:9px}.hero__index{left:18px;bottom:13px;font-size:12px}.trust-strip__inner{padding:17px 14px}.trust-strip__item{font-size:10px;line-height:1.5;padding:0 5px}.trust-strip__item span{display:block;font-size:20px;margin:0 0 5px}.wrap{padding-left:23px;padding-right:23px}.intro{padding:77px 0 80px}.intro__grid{grid-template-columns:1fr;gap:30px}.intro__heading{font-size:29px;margin:17px 0 17px}.intro__text{font-size:13px}.intro__stamp{width:155px;height:155px;justify-self:start;margin-left:15px}.intro__stamp strong{font-size:29px}.intro__stamp span{font-size:8px;margin-top:11px}.intro__english{font-size:23px}.intro__line{margin:25px 0}.selection{padding:75px 0 82px}.selection__header{display:block;margin-bottom:26px}.section-title{font-size:30px;margin-top:15px}.selection__intro{text-align:left;margin-top:14px;max-width:unset;font-size:12px}.menu-grid{grid-template-columns:1fr;gap:22px}.menu-card__visual{aspect-ratio:1/0.82}.menu-card--tea .menu-card__visual{aspect-ratio:1/1.08}.menu-card--sandwich .menu-card__visual{aspect-ratio:1/0.96}.menu-card__content{padding:21px 22px 26px}.menu-card__title{font-size:24px;margin:7px 0 9px}.menu-card__desc{min-height:unset;margin-bottom:16px;font-size:13px}.selection__note{text-align:left;line-height:1.8}.occasion{padding:78px 0 85px}.occasion__header{margin-bottom:25px}.occasion__header .subtext{font-size:12px}.occasion__grid{gap:10px}.occasion__item{min-height:177px;padding:20px 16px}.occasion__name{font-size:16px;margin-top:20px}.occasion__desc{font-size:11px}.interlude{height:285px}.interlude img{object-position:50% 45%}.interlude__copy{left:23px;right:20px}.interlude__copy small{font-size:11px}.interlude__copy h2{font-size:27px}.process{padding:79px 0 84px}.process__heading{margin-bottom:24px}.process__grid{grid-template-columns:repeat(2,1fr);gap:30px 10px}.step{margin-right:7px;padding-right:9px}.step:not(:last-child)::after{display:none}.step__num{font-size:32px}.step__title{font-size:18px;margin:15px 0 7px}.step__text{font-size:12px}.process__foot{display:block;padding-top:25px;margin-top:30px}.process__foot p{font-size:12px;margin-bottom:18px}.contact__inner{display:block;padding-top:81px;padding-bottom:87px}.contact__title{font-size:31px;margin:18px 0}.contact__desc{font-size:13px}.contact__actions{margin-top:34px;gap:11px}.contact__num{font-size:34px}.faq{padding:75px 0 87px}.faq__inner{gap:20px}.faq__header h2{font-size:30px}.faq__caption{font-size:12px}.faq summary{font-size:13px;padding:18px 0}.faq details p{font-size:12px}.footer{padding:48px 0 90px}.footer__main{display:block;padding-bottom:34px}.footer__brand{font-size:28px}.footer__info{text-align:left;margin-top:27px;font-size:12px}.footer__bottom{font-size:10px}.mobile-call{display:flex;position:fixed;z-index:70;bottom:0;left:0;right:0;align-items:center;justify-content:center;gap:12px;color:#fff;background:#413327;height:calc(62px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -8px 30px rgba(50,29,16,.15);font-size:14px;font-weight:700;letter-spacing:-.02em}.mobile-call svg{width:18px;height:18px}.footer__bottom{gap:8px}}
+    @media (max-width:375px){.hero__heading{font-size:31px}.hero__buttons .btn-primary,.hero__buttons .btn-outline{font-size:11px;padding:12px}.wordmark__name{font-size:19px}.trust-strip__item{font-size:9px}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto !important;transition:none !important;animation:none !important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <div class="announcement">GONTRAN CHERRIER · CORPORATE & GROUP ORDER · 기업·기관·행사 단체주문 상담</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#home" aria-label="곤트란 쉐리에 홈으로">
+        <span class="wordmark__name">GONTRAN CHERRIER</span>
+        <span class="wordmark__tag">ARTISAN BOULANGER · PARIS</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="주요 메뉴">
+        <a href="#about">BRAND STORY</a>
+        <a href="#menu">MENU SELECTION</a>
+        <a href="#process">ORDER GUIDE</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-call" href="tel:01083788187" aria-label="010-8378-8187 전화상담">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1A19.4 19.4 0 0 1 5.2 12.8 19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7 10.5a16 16 0 0 0 6.5 6.5l2-2a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2z"/></svg>
+        단체주문 전화상담
+      </a>
+      <button class="mobile-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="메뉴 열기"><span class="bars"></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <div class="hero__label">GONTRAN CHERRIER · GROUP ORDER</div>
+          <h1 class="hero__heading" id="hero-heading">함께하는 자리,<br><em>더 특별한 맛으로</em><br>기억되도록.</h1>
+          <p class="hero__desc">기업 행사부터 회의 간식, 감사의 마음을 담은 선물까지.<br>베이커리와 샌드위치, 다과 세트를<br>필요한 자리에 어울리도록 상담해 드립니다.</p>
+          <div class="hero__buttons">
+            <a class="btn-primary" href="#menu">메뉴 구성 살펴보기 <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="btn-outline" href="tel:01083788187">단체주문 전화문의 <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero__image-area">
+          <img class="hero__image" src="assets/bakery-selection.webp" alt="매장 진열대에 갓 구운 다양한 빵이 정갈하게 놓여 있는 곤트란 쉐리에 베이커리" width="1536" height="1024" fetchpriority="high">
+          <div class="hero__vertical">FRENCH BAKERY · FOR EVERY OCCASION</div>
+          <span class="hero__index">01 / 03 — BAKERY SELECTION</span>
+          <div class="hero__float" aria-hidden="true"><div class="en">Gontran Cherrier</div><div class="fine">ARTISAN BOULANGER · PARIS</div></div>
+        </div>
+      </div>
+    </section>
+    <div class="trust-strip" aria-label="단체주문 활용 안내">
+      <div class="trust-strip__inner">
+        <div class="trust-strip__item"><span>01</span> 기업·기관 단체간식</div>
+        <div class="trust-strip__item"><span>02</span> 행사·회의·세미나</div>
+        <div class="trust-strip__item"><span>03</span> 선물·답례품 구성</div>
+      </div>
+    </div>
+    <section class="intro" id="about" aria-labelledby="about-title">
+      <div class="wrap intro__grid">
+        <div>
+          <div class="eyebrow">A little something special</div>
+          <h2 class="display intro__heading" id="about-title">좋은 자리에 어울리는<br>좋은 빵의 순간.</h2>
+          <p class="subtext intro__text">한 사람을 위한 간식도, 여러 사람을 위한 자리도<br>준비하는 마음은 같습니다.<br>곤트란 쉐리에의 베이커리와 다과, 샌드위치를 통해<br>함께 나누는 시간을 더욱 풍성하게 만들어 보세요.</p>
+          <span class="intro__line" aria-hidden="true"></span>
+          <div class="intro__english">Made to share, made to remember.</div>
+        </div>
+        <div class="intro__stamp" aria-label="Gontran Cherrier French Bakery">
+          <strong>GC</strong><span>GONTRAN CHERRIER<br>ARTISAN BOULANGER · PARIS</span>
+        </div>
+      </div>
+    </section>
+    <section class="selection" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="selection__header">
+          <div><div class="eyebrow">Our selection</div><h2 class="display section-title" id="menu-title">필요한 자리에 맞춰 고르는<br>단체주문 셀렉션</h2></div>
+          <p class="selection__intro">행사 목적과 수량, 원하는 메뉴에 따라<br>가능한 구성을 전화로 안내해 드립니다.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card menu-card--bakery">
+            <div class="menu-card__visual"><img src="assets/bakery-selection.webp" alt="크루아상과 다양한 빵을 고를 수 있는 베이커리 진열대" width="1536" height="1024" loading="eager"><span class="menu-card__number">01</span></div>
+            <div class="menu-card__content"><div class="menu-card__en">Bakery selection</div><h3 class="menu-card__title">베이커리 셀렉션</h3><p class="menu-card__desc">다양한 빵으로 준비하는 든든한 간식 구성.<br>회의, 행사, 단체 모임을 위한 베이커리 선택.</p><a class="menu-card__link" href="tel:01083788187" aria-label="베이커리 셀렉션 전화상담"><span>구성 및 수량 전화상담</span><span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="menu-card menu-card--tea">
+            <div class="menu-card__visual"><img src="assets/tea-gift-set.webp" alt="리본으로 포장한 쿠키와 다과 선물 세트" width="1069" height="1471" loading="eager"><span class="menu-card__number">02</span></div>
+            <div class="menu-card__content"><div class="menu-card__en">Tea &amp; gift set</div><h3 class="menu-card__title">다과 세트</h3><p class="menu-card__desc">간식부터 감사 선물까지 품격 있게.<br>마음을 전하는 자리에 어울리는 다과 구성.</p><a class="menu-card__link" href="tel:01083788187" aria-label="다과 세트 전화상담"><span>구성 및 수량 전화상담</span><span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="menu-card menu-card--sandwich">
+            <div class="menu-card__visual"><img src="assets/sandwich-selection.webp" alt="햄과 채소를 담아 준비한 크루아상과 빵 샌드위치" width="646" height="805" loading="eager"><span class="menu-card__number">03</span></div>
+            <div class="menu-card__content"><div class="menu-card__en">Sandwich selection</div><h3 class="menu-card__title">샌드위치 셀렉션</h3><p class="menu-card__desc">편하게 나누고 즐길 수 있는 샌드위치.<br>오피스 미팅과 단체 행사 간식으로 추천.</p><a class="menu-card__link" href="tel:01083788187" aria-label="샌드위치 셀렉션 전화상담"><span>구성 및 수량 전화상담</span><span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <p class="selection__note">※ 사진은 메뉴 구성 참고용입니다. 실제 주문 가능 상품, 수량 및 가격은 전화 상담 시 확인해 주세요.</p>
+      </div>
+    </section>
+    <section class="occasion" id="occasion" aria-labelledby="occasion-title">
+      <div class="wrap">
+        <div class="occasion__header"><div class="eyebrow">For every occasion</div><h2 class="display section-title" id="occasion-title">어떤 자리에도, 따뜻하게</h2><p class="subtext">다양한 모임에 어울리는 구성을 함께 고민합니다.</p></div>
+        <div class="occasion__grid">
+          <div class="occasion__item"><span class="occasion__n">01.</span><strong class="occasion__name">기업·사내 행사</strong><p class="occasion__desc">직원 간식, 사내 이벤트 등<br>다 함께 나누는 자리</p></div>
+          <div class="occasion__item"><span class="occasion__n">02.</span><strong class="occasion__name">회의·세미나</strong><p class="occasion__desc">미팅과 교육, 행사 중<br>간편하게 즐기는 다과</p></div>
+          <div class="occasion__item"><span class="occasion__n">03.</span><strong class="occasion__name">감사·답례 선물</strong><p class="occasion__desc">감사의 마음을 담은<br>정성스러운 선물 구성</p></div>
+          <div class="occasion__item"><span class="occasion__n">04.</span><strong class="occasion__name">학교·기관 모임</strong><p class="occasion__desc">행사 성격과 인원에 맞춘<br>단체 간식 상담</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="interlude" aria-label="다과 세트 이미지">
+      <img src="assets/tea-gift-set.webp" alt="고급 포장의 다과 선물 세트" loading="eager" width="1069" height="1471">
+      <div class="interlude__copy"><small>THE ART OF SHARING</small><h2>마음을 전하는 순간까지<br>더 특별할 수 있도록.</h2></div>
+    </section>
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="process__heading"><div class="eyebrow">How to order</div><h2 class="display section-title" id="process-title">단체주문, 이렇게 진행됩니다.</h2></div>
+        <div class="process__grid">
+          <div class="step"><div class="step__num">01</div><h3 class="step__title">전화 문의</h3><p class="step__text">원하시는 날짜와<br>예상 인원을 알려주세요.</p></div>
+          <div class="step"><div class="step__num">02</div><h3 class="step__title">구성 상담</h3><p class="step__text">행사 목적과 예산,<br>원하는 메뉴를 상담합니다.</p></div>
+          <div class="step"><div class="step__num">03</div><h3 class="step__title">주문 확정</h3><p class="step__text">가능한 메뉴와 수량,<br>일정을 확인합니다.</p></div>
+          <div class="step"><div class="step__num">04</div><h3 class="step__title">주문 준비</h3><p class="step__text">확정된 내용에 맞춰<br>주문을 준비합니다.</p></div>
+        </div>
+        <div class="process__foot"><p>주문 수량·가격·준비 일정 및 수령 방법은 상담을 통해 안내드립니다.</p><a class="btn-outline" href="tel:01083788187">주문 상담 연결 <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__inner">
+        <div><div class="eyebrow eyebrow--light">Let's make it special</div><h2 class="display contact__title" id="contact-title">특별한 자리를 준비하고 계신가요?<br>단체주문은 전화로 문의해 주세요.</h2><p class="contact__desc">희망 날짜, 예상 인원, 예산과 원하시는 구성을 알려주시면<br>확인 후 가능한 메뉴와 주문 조건을 안내해 드립니다.</p></div>
+        <div class="contact__actions"><a class="contact__num" href="tel:01083788187">010-8378-8187</a><a class="btn-light" href="tel:01083788187">전화로 단체주문 상담하기 <span class="arrow" aria-hidden="true">↗</span></a><span class="contact__hint">전화 상담을 통해 구성과 주문 가능 여부를 확인해 주세요.</span></div>
+      </div>
+    </section>
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__inner">
+        <div class="faq__header"><div class="eyebrow">Frequently asked questions</div><h2 class="display section-title" id="faq-title">자주 묻는 질문</h2><p class="faq__caption">궁금하신 내용은 전화로 문의해 주세요.</p></div>
+        <div class="faq__items">
+          <details><summary>단체주문은 어떻게 신청하나요?<span class="plus" aria-hidden="true">+</span></summary><p>전화 010-8378-8187로 희망 날짜, 예상 인원, 원하시는 메뉴를 알려주시면 상담해 드립니다.</p></details>
+          <details><summary>메뉴 구성은 선택할 수 있나요?<span class="plus" aria-hidden="true">+</span></summary><p>베이커리, 다과, 샌드위치 등 원하시는 구성을 말씀해 주세요. 주문 가능 여부와 구성은 상담 시 확인할 수 있습니다.</p></details>
+          <details><summary>최소 주문 수량과 가격이 궁금합니다.<span class="plus" aria-hidden="true">+</span></summary><p>상품별 주문 가능 수량과 가격은 다를 수 있습니다. 상담 시 필요한 수량과 예산을 알려주시면 안내해 드립니다.</p></details>
+          <details><summary>수령 방법과 준비 일정은 어떻게 확인하나요?<span class="plus" aria-hidden="true">+</span></summary><p>희망하는 날짜와 수령 조건을 전화로 전달해 주세요. 가능한 준비 일정과 수령 방법을 확인해 드립니다.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__main">
+        <div><div class="footer__brand">GONTRAN CHERRIER</div><div class="footer__tag">ARTISAN BOULANGER · PARIS</div></div>
+        <div class="footer__info"><strong>GROUP ORDER / 단체주문 상담</strong><div>베이커리 셀렉션 · 다과 세트 · 샌드위치 셀렉션</div><div><a href="tel:01083788187">010-8378-8187</a></div></div>
+      </div>
+      <div class="footer__bottom"><span>© GONTRAN CHERRIER. Group order information.</span><a href="#home" aria-label="페이지 맨 위로 이동">BACK TO TOP ↑</a></div>
+    </div>
+  </footer>
+  <a class="mobile-call" href="tel:01083788187" aria-label="곤트란 쉐리에 단체주문 전화상담 010-8378-8187">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1A19.4 19.4 0 0 1 5.2 12.8 19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7 10.5a16 16 0 0 0 6.5 6.5l2-2a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2z"/></svg>
+    단체주문 전화상담 · 010-8378-8187
+  </a>
+  <script>
+    (function(){
+      const toggle=document.querySelector('.mobile-menu-toggle');
+      const nav=document.querySelector('#site-nav');
+      if(!toggle||!nav)return;
+      const close=()=>{nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','메뉴 열기')};
+      toggle.addEventListener('click',()=>{const open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기')});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+      window.addEventListener('resize',()=>{if(window.innerWidth>900)close()});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+    })();
+  </script>
+</body>
+</html>
